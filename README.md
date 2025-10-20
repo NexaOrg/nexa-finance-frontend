@@ -41,28 +41,10 @@ A interface é pensada para proporcionar **clareza, motivação e praticidade**,
 
 ---
 
-## 🧩 Estrutura de Pastas
-nexa_frontend/
-├── src/
-│ ├── assets/ # Imagens e ícones
-│ ├── components/ # Componentes reutilizáveis
-│ ├── contexts/ # Contextos globais (ex: auth, theme)
-│ ├── hooks/ # Custom hooks
-│ ├── pages/ # Páginas principais (Login, Dashboard, etc.)
-│ ├── services/ # Comunicação com API
-│ ├── utils/ # Funções auxiliares
-│ ├── App.tsx # Componente raiz
-│ └── main.tsx # Ponto de entrada da aplicação
-├── .env.example # Exemplo de variáveis de ambiente
-├── package.json
-└── README.md
-
----
-
 🚀 Como Executar o Projeto
 1️⃣ Clonar o repositório
 
-git clone https://github.com/seu-usuario/nexa-frontend.git
+git clone https://github.com/Nexa-Partners/nexa-finance-frontend.git
 cd nexa-frontend
 
 2️⃣ Instalar as dependências
@@ -98,48 +80,17 @@ Fluxo de autenticação:
     Adicione aqui imagens da aplicação em funcionamento (por exemplo):
 
 <div align="center">
+    
+<img src="../../profile/assets/financeEX.svg" alt="Nexa App Preview" width="200"/>
 
-🖼️ Tela de Login
-
-🖼️ Dashboard Financeira
+<img src="../profile/assets/financeEX.svg" alt="Nexa App Preview" width="200"/>
 </div>
 📝 Documentação Técnica
 
     📄 Acesse o Documento Técnico no Google Docs
 
-(Insira aqui o link com permissão de visualização ou edição conforme desejado.)
+(https://docs.google.com/document/d/1b7rr_W3e6ecN7ZVXyZC4E3Qc2bcXIvdSlfa4_1rpiIk/edit?usp=sharing)
 🤝 Contribuição
-
-Contribuições são sempre bem-vindas!
-Para contribuir:
-
-    Faça um fork do projeto.
-
-    Crie uma branch com sua feature:
-
-git checkout -b feature/nome-da-feature
-
-Faça o commit das alterações:
-
-git commit -m "Adiciona nova feature"
-
-Envie sua branch:
-
-    git push origin feature/nome-da-feature
-
-    Abra um Pull Request.
-
-🧾 Licença
-
-Este projeto é distribuído sob a licença MIT.
-Consulte o arquivo LICENSE para mais informações.
-👨‍💻 Autor
-
-Pedro Henrique
-💼 Desenvolvedor Full Stack | React + Go
-🌐 GitHub
-
-📧 Contato: pedrohenrique@email.com
 
     "Transformando números em propósito e clareza financeira."
     — Nexa App
