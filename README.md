@@ -77,19 +77,17 @@ Fluxo de autenticação:
 
 📸 Exemplos de Interface
 
-    Adicione aqui imagens da aplicação em funcionamento (por exemplo):
 
 <div align="center">
 <img src="./assets/menu.svg" alt="Nexa App Preview" width="200"/>
 
 <img src="./assets/configpage.svg" alt="Nexa App Preview" width="200"/>
 </div>
-📝 Documentação Técnica
 
-    📄 Acesse o Documento Técnico no Google Docs
+## 📝 Documentação
 
-(https://docs.google.com/document/d/1b7rr_W3e6ecN7ZVXyZC4E3Qc2bcXIvdSlfa4_1rpiIk/edit?usp=sharing)
-🤝 Contribuição
+> 📄 Acesso ao [Termo de anuencia no docs](https://docs.google.com/document/d/1b7rr_W3e6ecN7ZVXyZC4E3Qc2bcXIvdSlfa4_1rpiIk/edit?usp=sharing)
+
 
     "Transformando números em propósito e clareza financeira."
     — Nexa App
