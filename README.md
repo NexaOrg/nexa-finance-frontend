@@ -1,12 +1,12 @@
-# 🌿 Nexa Finance Frontend
+# 🌿 Nexa Finance - Frontend
 
-Frontend do **Nexa App**, uma aplicação moderna de **gestão financeira pessoal** desenvolvida em **React**, com foco em controle de gastos, metas financeiras e visualização de dados de forma intuitiva e elegante.
+Frontend do **Nexa Finance**, uma aplicação moderna de **gestão financeira pessoal** desenvolvida em **React Native** (mobile), com foco em controle de gastos, metas financeiras e visualização de dados de forma intuitiva e elegante.
 
 ---
 
 ## 📘 Descrição do Projeto
 
-O **Nexa App** permite que usuários gerenciem suas finanças de maneira simples e eficiente.  
+O **Nexa Finance** permite que usuários gerenciem suas finanças de maneira simples e eficiente.  
 A interface é pensada para proporcionar **clareza, motivação e praticidade**, ajudando o usuário a entender seus hábitos financeiros e alcançar seus objetivos.
 
 > 💡 **Objetivo**: transformar o controle financeiro em algo natural e agradável, com insights visuais e acompanhamento diário.
@@ -29,7 +29,7 @@ A interface é pensada para proporcionar **clareza, motivação e praticidade**,
 
 | Categoria | Tecnologias |
 |------------|--------------|
-| **Framework** | React 18 + Vite |
+| **Framework** | React Native |
 | **Linguagem** | TypeScript |
 | **Estilização** | Tailwind CSS |
 | **Gerenciamento de Estado** | Context API |
