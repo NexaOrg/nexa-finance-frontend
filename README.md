@@ -80,10 +80,9 @@ Fluxo de autenticação:
     Adicione aqui imagens da aplicação em funcionamento (por exemplo):
 
 <div align="center">
-    
-<img src="../../profile/assets/financeEX.svg" alt="Nexa App Preview" width="200"/>
+<img src="./assets/menu.svg" alt="Nexa App Preview" width="200"/>
 
-<img src="../profile/assets/financeEX.svg" alt="Nexa App Preview" width="200"/>
+<img src="./assets/configpage.svg" alt="Nexa App Preview" width="200"/>
 </div>
 📝 Documentação Técnica
 
