@@ -84,12 +84,6 @@ Fluxo de autenticação:
 <img src="./assets/configpage.svg" alt="Nexa App Preview" width="300"/>
 </div>
 
-### 🎲 Modelo do banco de dados
-
-<div align="start">
-<img src="./assets/Modelo_MER_Nexa_v3.svg" alt="Nexa DB Model" height="600"/>
-</div>
-
 ## 📝 Documentação
 
 > 📄 Acesso ao [Termo de anuencia no docs](https://docs.google.com/document/d/1b7rr_W3e6ecN7ZVXyZC4E3Qc2bcXIvdSlfa4_1rpiIk/edit?usp=sharing)
