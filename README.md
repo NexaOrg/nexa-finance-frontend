@@ -75,13 +75,19 @@ Fluxo de autenticação:
 
     Recebe o JWT e armazena de forma segura.
 
-📸 Exemplos de Interface
+### 📸 Exemplos de Interface
 
 
 <div align="center">
-<img src="./assets/menu.svg" alt="Nexa App Preview" width="200"/>
+<img src="./assets/menu.svg" alt="Nexa App Preview" width="300"/>
 
-<img src="./assets/configpage.svg" alt="Nexa App Preview" width="200"/>
+<img src="./assets/configpage.svg" alt="Nexa App Preview" width="300"/>
+</div>
+
+### 🎲 Modelo do banco de dados
+
+<div align="start">
+<img src="./assets/Modelo_MER_Nexa_v3.svg" alt="Nexa DB Model" height="600"/>
 </div>
 
 ## 📝 Documentação
