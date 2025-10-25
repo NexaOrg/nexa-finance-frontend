@@ -1,50 +1,93 @@
-# Welcome to your Expo app 👋
+# 🌿 Nexa Finance - Frontend
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Frontend do **Nexa Finance**, uma aplicação moderna de **gestão financeira pessoal** desenvolvida em **React Native** (mobile), com foco em controle de gastos, metas financeiras e visualização de dados de forma intuitiva e elegante.
 
-## Get started
+---
 
-1. Install dependencies
+## 📘 Descrição do Projeto
 
-   ```bash
-   npm install
-   ```
+O **Nexa Finance** permite que usuários gerenciem suas finanças de maneira simples e eficiente.  
+A interface é pensada para proporcionar **clareza, motivação e praticidade**, ajudando o usuário a entender seus hábitos financeiros e alcançar seus objetivos.
 
-2. Start the app
+> 💡 **Objetivo**: transformar o controle financeiro em algo natural e agradável, com insights visuais e acompanhamento diário.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🧠 Principais Funcionalidades
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- 💵 **Cadastro e login de usuários**
+- 📊 **Visualização de gastos e ganhos**
+- 🗓️ **Controle por período (semanal, mensal, anual)**
+- 🎯 **Criação de metas financeiras**
+- 🔐 **Criptografia de senha antes do envio ao backend**
+- 🌈 **Interface responsiva e intuitiva**
+- ☁️ **Integração com o backend Nexa (API REST)**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## ⚙️ Tecnologias Utilizadas
 
-When you're ready, run:
+| Categoria | Tecnologias |
+|------------|--------------|
+| **Framework** | React Native |
+| **Linguagem** | TypeScript |
+| **Estilização** | Tailwind CSS |
+| **Gerenciamento de Estado** | Context API |
+| **Autenticação** | JWT / HTTPS |
+| **Comunicação com API** | Axios |
+| **Gráficos e Visualização** | Recharts |
+| **Formulários** | React Hook Form |
+| **Build & Deploy** | Vite + Netlify / Vercel |
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+🚀 Como Executar o Projeto
+1️⃣ Clonar o repositório
 
-## Learn more
+git clone https://github.com/Nexa-Partners/nexa-finance-frontend.git
+cd nexa-frontend
 
-To learn more about developing your project with Expo, look at the following resources:
+2️⃣ Instalar as dependências
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+npm install
 
-## Join the community
+3️⃣ Rodar o servidor de desenvolvimento
 
-Join our community of developers creating universal apps.
+npm run dev
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4️⃣ Acessar o app
+
+Abra no navegador:
+👉 http://localhost:5173
+🧱 Integração com o Backend
+
+O Nexa Frontend consome a API do Nexa Backend, responsável por autenticação, registro e análise de dados financeiros.
+
+    Repositório do backend: nexa-backend
+
+Fluxo de autenticação:
+
+    O frontend requisita a chave pública RSA do backend.
+
+    Criptografa a senha localmente.
+
+    Envia os dados criptografados para o endpoint de login.
+
+    Recebe o JWT e armazena de forma segura.
+
+### 📸 Exemplos de Interface
+
+
+<div align="center">
+<img src="./assets/menu.svg" alt="Nexa App Preview" width="300"/>
+
+<img src="./assets/configpage.svg" alt="Nexa App Preview" width="300"/>
+</div>
+
+## 📝 Documentação
+
+> 📄 Acesso ao [Termo de anuencia no docs](https://docs.google.com/document/d/1b7rr_W3e6ecN7ZVXyZC4E3Qc2bcXIvdSlfa4_1rpiIk/edit?usp=sharing)
+
+
+    "Transformando números em propósito e clareza financeira."
+    — Nexa App
