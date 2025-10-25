@@ -53,12 +53,12 @@ npm install
 
 3️⃣ Rodar o servidor de desenvolvimento
 
-npm run dev
+npm expo start
 
 4️⃣ Acessar o app
 
 Abra no navegador:
-👉 http://localhost:5173
+👉 http://localhost:8081
 🧱 Integração com o Backend
 
 O Nexa Frontend consome a API do Nexa Backend, responsável por autenticação, registro e análise de dados financeiros.
