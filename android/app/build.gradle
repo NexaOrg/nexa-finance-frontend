@@ -87,9 +87,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.anonymous.nexafinancefrontend'
+    namespace 'com.nexa.nexafinance'
     defaultConfig {
-        applicationId 'com.anonymous.nexafinancefrontend'
+        applicationId 'com.nexa.nexafinance'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

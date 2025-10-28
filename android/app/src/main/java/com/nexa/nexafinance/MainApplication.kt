@@ -1,4 +1,4 @@
-package com.anonymous.nexafinancefrontend
+package com.nexa.nexafinance
 
 import android.app.Application
 import android.content.res.Configuration
