@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Text, TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -32,9 +32,17 @@ export function Home() {
                       autoCapitalize='none'
                       autoCorrect={false}/>
 
-          <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
-            <Text style={{color: '#9E9E9E', textAlign: 'right', fontSize: 15, padding: 8}} onPress={() => console.log('Esqueceu a senha de novo?')}>Esqueci minha senha</Text>
-          </View>
+          <TouchableOpacity style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'flex-end'}}
+                  onPress={() => console.log('Esqueceu a senha de novo?')}>
+            <Text style={{
+                    color: '#9E9E9E',
+                    textAlign: 'right',
+                    fontSize: 15,
+                    padding: 8}}>Esqueci minha senha</Text>
+          </TouchableOpacity>
 
           <View style={{flex: 1, justifyContent: 'flex-end', gap: 10}}>
             <TouchableOpacity style={{
@@ -46,11 +54,14 @@ export function Home() {
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
-                        }}>
+                        }}
+                        onPress={() => console.log('Navegação para tela inicial')}>
                 <Text style={{color: 'white', fontSize: 18, fontWeight: 700}}>Entrar</Text>
               </TouchableOpacity>
 
-              <Text style={{textAlign: 'center', color: '#9E9E9E'}}>Criar uma conta</Text>
+              <TouchableOpacity onPress={() => console.log('Navegação para tela de criar conta')}>
+                <Text style={{textAlign: 'center', color: '#9E9E9E', fontSize: 15}}>Criar uma conta</Text>
+              </TouchableOpacity>
           </View>
         </View>
       </TouchableWithoutFeedback>
@@ -64,13 +75,10 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 50,
     backgroundColor: '#152C3C',
-    paddingInline: 15,
+    paddingHorizontal: 20,
     borderRadius: 13,
     color: 'white',
     fontSize: 18,
     marginVertical: 5
-  },
-  inputError: {
-    borderColor: '#ff3b30',
   },
 });
