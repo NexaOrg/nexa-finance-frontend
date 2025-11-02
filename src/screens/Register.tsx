@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export function Register({ navigation }: any) {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
     return (
         <SafeAreaView style={{
@@ -23,26 +28,30 @@ export function Register({ navigation }: any) {
                         placeholder='Nome'
                         placeholderTextColor="#9E9E9E"
                         autoCapitalize='words'
-                        autoCorrect={false} />
+                        autoCorrect={false}
+                        onChangeText={setName} />
 
                     <TextInput style={styles.input}
                         placeholder='Email'
                         placeholderTextColor="#9E9E9E"
                         autoCapitalize='none'
                         autoCorrect={false}
-                        keyboardType='email-address' />
+                        keyboardType='email-address'
+                        onChangeText={setEmail} />
 
                     <TextInput style={styles.input}
                         placeholder='Senha'
                         placeholderTextColor="#9E9E9E"
                         autoCapitalize='none'
-                        autoCorrect={false} />
+                        autoCorrect={false}
+                        onChangeText={setPassword} />
 
                     <TextInput style={styles.input}
                         placeholder='Confirmar senha'
                         placeholderTextColor="#9E9E9E"
                         autoCapitalize='none'
-                        autoCorrect={false} />
+                        autoCorrect={false}
+                        onChangeText={setConfirmPassword} />
 
                     <View style={{ flex: 1, justifyContent: 'flex-end', gap: 10 }}>
                         <TouchableOpacity style={{
@@ -55,7 +64,7 @@ export function Register({ navigation }: any) {
                             justifyContent: 'center',
                             alignItems: 'center',
                         }}
-                            onPress={() => console.log('Navegação para tela inicial')}>
+                            onPress={() => console.log({ name: name, email: email, password: password, conpassword: confirmPassword })}>
                             <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Entrar</Text>
                         </TouchableOpacity>
 
