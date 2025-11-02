@@ -82,7 +82,7 @@ export function Register({ navigation }: any) {
                             alignItems: 'center',
                         }}
                             onPress={handleRegister}>
-                            <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Entrar</Text>
+                            <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Continuar</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() => navigation.goBack()}>
