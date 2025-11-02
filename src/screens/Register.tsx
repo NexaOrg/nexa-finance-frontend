@@ -1,13 +1,30 @@
 import React, { useState } from 'react';
 import { Text, TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
+import { env } from '../../env';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import axios from 'axios';
 
 export function Register({ navigation }: any) {
+
+    const url = `${env.API_URL}/user`
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+
+    const handleRegister = async () => {
+        try {
+            await axios.post(url, {
+                name,
+                username: `${name.toLowerCase()}${email.split('@')[0]}`,
+                email,
+                password,
+            });
+        } catch (error: any) {
+            console.log('Server Error: ', error.message);
+        }
+    };
 
     return (
         <SafeAreaView style={{
@@ -64,7 +81,7 @@ export function Register({ navigation }: any) {
                             justifyContent: 'center',
                             alignItems: 'center',
                         }}
-                            onPress={() => console.log({ name: name, email: email, password: password, conpassword: confirmPassword })}>
+                            onPress={handleRegister}>
                             <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Entrar</Text>
                         </TouchableOpacity>
 
