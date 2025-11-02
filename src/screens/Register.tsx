@@ -21,6 +21,8 @@ export function Register({ navigation }: any) {
                 email,
                 password,
             });
+
+            navigation.goBack()
         } catch (error: any) {
             console.log('Server Error: ', error.message);
         }
@@ -61,14 +63,16 @@ export function Register({ navigation }: any) {
                         placeholderTextColor="#9E9E9E"
                         autoCapitalize='none'
                         autoCorrect={false}
-                        onChangeText={setPassword} />
+                        onChangeText={setPassword}
+                        secureTextEntry={true} />
 
                     <TextInput style={styles.input}
                         placeholder='Confirmar senha'
                         placeholderTextColor="#9E9E9E"
                         autoCapitalize='none'
                         autoCorrect={false}
-                        onChangeText={setConfirmPassword} />
+                        onChangeText={setConfirmPassword}
+                        secureTextEntry={true} />
 
                     <View style={{ flex: 1, justifyContent: 'flex-end', gap: 10 }}>
                         <TouchableOpacity style={{

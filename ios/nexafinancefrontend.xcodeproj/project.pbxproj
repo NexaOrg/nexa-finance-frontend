@@ -20,7 +20,7 @@
 		13B07F961A680F5B00A75B9A /* nexafinancefrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nexafinancefrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = nexafinancefrontend/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = nexafinancefrontend/Info.plist; sourceTree = "<group>"; };
-		1A715A34B389D5832DCF81FB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = nexafinancefrontend/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		1A715A34B389D5832DCF81FB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = nexafinancefrontend/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		26D1B54BED34406C9D181E57 /* Pods-nexafinancefrontend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nexafinancefrontend.release.xcconfig"; path = "Target Support Files/Pods-nexafinancefrontend/Pods-nexafinancefrontend.release.xcconfig"; sourceTree = "<group>"; };
 		68AF35DE850A486CE805726D /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-nexafinancefrontend/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		95B4BA6DA2EE5FA685EC6748 /* Pods-nexafinancefrontend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nexafinancefrontend.debug.xcconfig"; path = "Target Support Files/Pods-nexafinancefrontend/Pods-nexafinancefrontend.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +128,6 @@
 				95B4BA6DA2EE5FA685EC6748 /* Pods-nexafinancefrontend.debug.xcconfig */,
 				26D1B54BED34406C9D181E57 /* Pods-nexafinancefrontend.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -166,7 +165,6 @@
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 7JSY9C6T6V;
 						LastSwiftMigration = 1250;
 						ProvisioningStyle = Automatic;
 					};
@@ -364,7 +362,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anonymous.nexafinancefrontend;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexa.nexafinancefrontend;
 				PRODUCT_NAME = nexafinancefrontend;
 				SWIFT_OBJC_BRIDGING_HEADER = "nexafinancefrontend/nexafinancefrontend-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -398,7 +396,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anonymous.nexafinancefrontend;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexa.nexafinancefrontend;
 				PRODUCT_NAME = nexafinancefrontend;
 				SWIFT_OBJC_BRIDGING_HEADER = "nexafinancefrontend/nexafinancefrontend-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

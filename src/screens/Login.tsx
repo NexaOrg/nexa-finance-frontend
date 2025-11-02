@@ -30,7 +30,8 @@ export function Login({ navigation }: any) {
             placeholder='Senha'
             placeholderTextColor="#9E9E9E"
             autoCapitalize='none'
-            autoCorrect={false} />
+            autoCorrect={false}
+            secureTextEntry={true} />
 
           <TouchableOpacity style={{
             display: 'flex',
