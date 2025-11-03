@@ -74,7 +74,7 @@ export function Register({ navigation }: any) {
                         onChangeText={setConfirmPassword}
                         secureTextEntry={true} />
 
-                    <View style={{ flex: 1, justifyContent: 'flex-end', gap: 10 }}>
+                    <View style={{ flex: 1, justifyContent: 'flex-end', gap: 10, paddingBottom: 15 }}>
                         <TouchableOpacity style={{
                             width: '100%',
                             height: 45,
@@ -86,7 +86,7 @@ export function Register({ navigation }: any) {
                             alignItems: 'center',
                         }}
                             onPress={handleRegister}>
-                            <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Continuar</Text>
+                            <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Registrar</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() => navigation.goBack()}>

@@ -47,7 +47,7 @@ export function Login({ navigation }: any) {
             }}>Esqueci minha senha</Text>
           </TouchableOpacity>
 
-          <View style={{ flex: 1, justifyContent: 'flex-end', gap: 10 }}>
+          <View style={{ flex: 1, justifyContent: 'flex-end', gap: 10, paddingBottom: 15 }}>
             <TouchableOpacity style={{
               width: '100%',
               height: 45,
