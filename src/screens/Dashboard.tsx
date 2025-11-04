@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { View, Text } from 'react-native';
+import { PieChart } from 'react-native-gifted-charts';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export function Dashboard({ navigation }: any) {
 
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const pieData = [
+        { value: 70, color: '#F39F03' },
+        { value: 30, color: '#ffffff' }]
 
     return (
         <View style={{
@@ -65,6 +69,26 @@ export function Dashboard({ navigation }: any) {
                     flex: 7,
                     height: 250,
                 }}>
+                    <View style={{ height: '100%', display: 'flex', flexDirection: 'row', paddingVertical: 20, paddingHorizontal: 30, justifyContent: 'space-between', alignItems: 'center' }}>
+                        <PieChart
+                            donut
+                            innerRadius={60}
+                            radius={90}
+                            innerCircleColor={'#213b4d'}
+                            data={pieData}
+                            centerLabelComponent={() => {
+                                return <View style={{}}>
+                                    <Text style={{ fontSize: 35, color: '#ffffff', textAlign: 'center' }}>70%</Text>
+                                    <Text style={{ fontSize: 16, color: '#ffffff80' }}>Novembro</Text>
+                                </View>
+                            }}
+                        />
+
+                        <View>
+                            <Text style={{ fontSize: 35, color: '#ffffff', textAlign: 'center' }}>Limite</Text>
+                            <Text style={{ fontSize: 20, color: '#ffffff80', textAlign: 'center' }}>R$ 2.000,00</Text>
+                        </View>
+                    </View>
                 </View>
             </View>
 
