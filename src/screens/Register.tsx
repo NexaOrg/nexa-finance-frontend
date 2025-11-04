@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Text, TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
+import { TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
+import { Text } from '../components/GlobalText';
 import { env } from '../../env';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import axios from 'axios';

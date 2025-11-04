@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
+import { TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text } from '../components/GlobalText';
 
 export function Login({ navigation }: any) {
 
@@ -42,7 +43,7 @@ export function Login({ navigation }: any) {
             <Text style={{
               color: '#9E9E9E',
               textAlign: 'right',
-              fontSize: 15,
+              fontSize: 13,
               padding: 8
             }}>Esqueci minha senha</Text>
           </TouchableOpacity>

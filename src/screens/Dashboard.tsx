@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import { Text } from '../components/GlobalText';
 import { PieChart } from 'react-native-gifted-charts';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -10,7 +11,7 @@ export function Dashboard({ navigation }: any) {
     const [isVisible, setIsVisible] = useState(true);
     const pieData = [
         { value: 70, color: '#F39F03' },
-        { value: 30, color: '#ffffff' }]
+        { value: 30, color: '#ffffff' }];
 
     return (
         <View style={{
@@ -40,7 +41,7 @@ export function Dashboard({ navigation }: any) {
                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                         <View style={{ display: 'flex', flexDirection: 'row' }}>
                             <Text style={{ color: '#ffffffff', fontSize: 18, textAlignVertical: 'bottom' }}>R$</Text>
-                            {isVisible ? (<Text style={{ color: '#ffffff', fontSize: 35, lineHeight: 35 }}>507,32</Text>) : (<Text style={{ color: '#ffffff', fontSize: 35, lineHeight: 35 }}>•••••••</Text>)}
+                            {isVisible ? (<Text style={{ color: '#ffffff', fontSize: 35, lineHeight: 40 }}>507,32</Text>) : (<Text style={{ color: '#ffffff', fontSize: 35, lineHeight: 35 }}>•••••••</Text>)}
                         </View>
 
                         <TouchableOpacity onPress={() => setIsVisible(!isVisible)}>
@@ -77,9 +78,9 @@ export function Dashboard({ navigation }: any) {
                             innerCircleColor={'#213b4d'}
                             data={pieData}
                             centerLabelComponent={() => {
-                                return <View style={{}}>
-                                    <Text style={{ fontSize: 35, color: '#ffffff', textAlign: 'center' }}>70%</Text>
-                                    <Text style={{ fontSize: 16, color: '#ffffff80' }}>Novembro</Text>
+                                return <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                                    <Text style={{ fontSize: 32, color: '#ffffff', textAlign: 'center', lineHeight: 30 }}>70%</Text>
+                                    <Text style={{ fontSize: 14, color: '#ffffff80' }}>Novembro</Text>
                                 </View>
                             }}
                         />
