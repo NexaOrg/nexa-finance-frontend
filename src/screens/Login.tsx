@@ -58,7 +58,7 @@ export function Login({ navigation }: any) {
               justifyContent: 'center',
               alignItems: 'center',
             }}
-              onPress={() => console.log('Navegação para tela inicial')}>
+              onPress={() => navigation.navigate('Dashboard')}>
               <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Entrar</Text>
             </TouchableOpacity>
 
