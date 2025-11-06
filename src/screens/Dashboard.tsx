@@ -1,104 +1,203 @@
 import React, { useState } from 'react';
-import { TouchableOpacity } from 'react-native';
-import { View } from 'react-native';
+import { ScrollView, TouchableOpacity, View } from 'react-native';
 import { Text } from '../components/GlobalText';
 import { PieChart } from 'react-native-gifted-charts';
-
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export function Dashboard({ navigation }: any) {
+  const [isVisible, setIsVisible] = useState(true);
 
-    const [isVisible, setIsVisible] = useState(true);
-    const pieData = [
-        { value: 70, color: '#F39F03' },
-        { value: 30, color: '#ffffff' }];
+  const pieData = [
+    { value: 70, color: '#F39F03' },
+    { value: 30, color: '#ffffff' },
+  ];
 
-    return (
-        <View style={{
-            display: 'flex',
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#0d1928',
-            //backgroundColor: '#213B4D',
-        }}>
-
+  return (
+        <ScrollView
+            style={{ flex: 1, backgroundColor: '#0d1928' }}
+            showsVerticalScrollIndicator={false}
+            bounces={true}>
+                
             <View style={{
-                flex: 1,
-                backgroundColor: '#213b4d',
-                height: 250,
-            }}>
+                        backgroundColor: '#0d1928',
+                        borderBottomLeftRadius: 15,
+                        borderBottomRightRadius: 15,
+                        paddingTop: 70,
+                        paddingHorizontal: 20,
+                        paddingBottom: 20
+                    }}>
+                <Text style={{ color: '#ffffff', fontSize: 18 }}>Gasto mensal</Text>
+
                 <View style={{
-                    flex: 4,
-                    backgroundColor: '#0d1928',
-                    height: 250,
-                    borderBottomLeftRadius: 35,
-                    borderBottomRightRadius: 35,
-                    paddingTop: 50,
-                    paddingHorizontal: 20,
-                    paddingBottom: 20
-                }}>
-                    <Text style={{ color: '#ffffff', fontSize: 18 }}>Gasto mensal</Text>
-                    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <View style={{ display: 'flex', flexDirection: 'row' }}>
-                            <Text style={{ color: '#ffffffff', fontSize: 18, textAlignVertical: 'bottom' }}>R$</Text>
-                            {isVisible ? (<Text style={{ color: '#ffffff', fontSize: 35, lineHeight: 40 }}>507,32</Text>) : (<Text style={{ color: '#ffffff', fontSize: 35, lineHeight: 35 }}>•••••••</Text>)}
-                        </View>
-
-                        <TouchableOpacity onPress={() => setIsVisible(!isVisible)}>
-                            {isVisible ? (<Icon name="eye-off-outline" size={24} color="#fff" />) : (<Icon name="eye-outline" size={24} color="#fff" />)}
-                        </TouchableOpacity>
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        paddingTop: 5,
+                    }}>
+                    
+                    <View style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
+                        <Text
+                            weight="light"
+                            style={{
+                                color: '#ffffff',
+                                fontSize: 18,
+                                textAlignVertical: 'bottom',
+                                marginBottom: 5,
+                            }}>
+                            R$
+                        </Text>
+                        
+                        {isVisible ? (
+                            <Text
+                                weight="light"
+                                style={{
+                                    color: '#ffffff',
+                                    fontSize: 40,
+                                    lineHeight: 40,
+                                }}>
+                            507,32
+                            </Text>
+                        ) : (
+                            <Text
+                                style={{
+                                    color: '#ffffff',
+                                    fontSize: 40,
+                                    lineHeight: 40,
+                                }}>
+                            •••••••
+                            </Text>
+                        )}
                     </View>
 
-                    <View style={{ flex: 1, justifyContent: 'flex-end' }}>
-                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-                            <View>
-                                <Text style={{ color: '#ffffff70', fontSize: 13, textAlignVertical: 'bottom' }}>Entradas (mês)</Text>
-                                <Text style={{ color: '#ffffff', fontSize: 20 }}>R$ 2.507,32</Text>
-                            </View>
-
-                            <View>
-                                <Text style={{ color: '#ffffff70', fontSize: 13, textAlignVertical: 'bottom' }}>Entradas (mês)</Text>
-                                <Text style={{ color: '#ffffff', fontSize: 20 }}>R$ 2.507,32</Text>
-                            </View>
-                        </View>
-                    </View>
-
-
+                    <TouchableOpacity onPress={() => setIsVisible(!isVisible)}>
+                        {isVisible ? (
+                            <Icon name="eye-off-outline" size={24} color="#fff" />
+                        ) : (
+                            <Icon name="eye-outline" size={24} color="#fff" />
+                        )}
+                    </TouchableOpacity>
                 </View>
 
-                <View style={{
-                    flex: 7,
-                    height: 250,
-                }}>
-                    <View style={{ height: '100%', display: 'flex', flexDirection: 'row', paddingVertical: 20, paddingHorizontal: 30, justifyContent: 'space-between', alignItems: 'center' }}>
-                        <PieChart
-                            donut
-                            innerRadius={60}
-                            radius={90}
-                            innerCircleColor={'#213b4d'}
-                            data={pieData}
-                            centerLabelComponent={() => {
-                                return <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ fontSize: 32, color: '#ffffff', textAlign: 'center', lineHeight: 30 }}>70%</Text>
-                                    <Text style={{ fontSize: 14, color: '#ffffff80' }}>Novembro</Text>
-                                </View>
-                            }}
-                        />
+                <View style={{ justifyContent: 'flex-end', marginTop: 20 }}>
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                            alignItems: 'flex-end',
+                        }}>
 
                         <View>
-                            <Text style={{ fontSize: 35, color: '#ffffff', textAlign: 'center' }}>Limite</Text>
-                            <Text style={{ fontSize: 20, color: '#ffffff80', textAlign: 'center' }}>R$ 2.000,00</Text>
+                            <Text
+                                weight="light"
+                                style={{
+                                    color: '#ffffff70',
+                                    fontSize: 13,
+                                    textAlignVertical: 'bottom',
+                                }}>
+                            Entradas (mês)
+                            </Text>
+
+                            <Text
+                                weight="light"
+                                style={{
+                                    color: '#ffffff',
+                                    fontSize: 20,
+                                }}>
+                            R$ 2.507,32
+                            </Text>
+                        </View>
+
+                        <View>
+                            <Text
+                                weight="light"
+                                style={{
+                                    color: '#ffffff70',
+                                    fontSize: 13,
+                                    textAlignVertical: 'bottom',
+                                }}>
+                            Saídas (mês)
+                            </Text>
+                            
+                            <Text
+                                weight="light"
+                                style={{
+                                    color: '#ffffff',
+                                    fontSize: 20,
+                                }}>
+                            R$ 2.000,00
+                            </Text>
                         </View>
                     </View>
                 </View>
             </View>
 
-            <View style={{
-                flex: 1,
-                backgroundColor: '#ffffff',
-                height: 250,
-            }}>
+            <View
+                style={{
+                    paddingVertical: 20,
+                    paddingHorizontal: 30,
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: '#213b4d',
+                    borderRadius: 15,
+                    gap: 50,
+                    marginTop: 10,
+                }}>
+                <PieChart
+                    donut
+                    radius={90}
+                    innerRadius={60}
+                    innerCircleColor="#213b4d"
+                    data={pieData}
+                    centerLabelComponent={() => (
+                    <View
+                        style={{
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}>
+                        <Text
+                            style={{
+                                fontSize: 32,
+                                color: '#ffffff',
+                                lineHeight: 30,
+                            }}>
+                        70%
+                        </Text>
+                        <Text style={{ fontSize: 14, color: '#ffffff80' }}>
+                        Novembro
+                        </Text>
+                    </View>
+                )}/>
+
+                <View>
+                    <Text 
+                        style={{
+                            fontSize: 35,
+                            color: '#ffffff',
+                            textAlign: 'center',
+                        }}>
+                    Limite
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: 20,
+                            color: '#ffffff80',
+                            textAlign: 'center',
+                        }}>
+                    R$ 2.000,00
+                    </Text>
+                </View>
             </View>
-        </View>
-    )
+
+            <View
+                style={{
+                    backgroundColor: '#ffffff',
+                    height: 700,
+                    marginTop: 10,
+                    borderTopLeftRadius: 15,
+                    borderTopRightRadius: 15,
+                }}
+            />
+        </ScrollView>
+  );
 }

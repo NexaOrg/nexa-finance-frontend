@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import BootSplash from 'react-native-bootsplash';
 import {
   useFonts,
+  Montserrat_300Light,
   Montserrat_400Regular,
   Montserrat_500Medium,
   Montserrat_700Bold,
@@ -12,6 +13,7 @@ import {
 
 export default function App() {
   const [] = useFonts({
+    Montserrat_300Light,
     Montserrat_400Regular,
     Montserrat_500Medium,
     Montserrat_700Bold,

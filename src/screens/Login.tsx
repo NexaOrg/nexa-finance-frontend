@@ -37,14 +37,15 @@ export function Login({ navigation }: any) {
           <TouchableOpacity style={{
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'flex-end'
+            justifyContent: 'flex-end',
+            alignSelf: 'flex-end',
           }}
             onPress={() => console.log('Esqueceu a senha de novo?')}>
             <Text style={{
               color: '#9E9E9E',
               textAlign: 'right',
               fontSize: 13,
-              padding: 8
+              padding: 8,
             }}>Esqueci minha senha</Text>
           </TouchableOpacity>
 
@@ -60,7 +61,7 @@ export function Login({ navigation }: any) {
               alignItems: 'center',
             }}
               onPress={() => navigation.navigate('Dashboard')}>
-              <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Entrar</Text>
+              <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium' }}>Entrar</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate('Register')}>
@@ -83,6 +84,7 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     color: 'white',
     fontSize: 18,
-    marginVertical: 5
+    marginVertical: 5,
+    fontFamily: 'Montserrat_400Regular'
   },
 });

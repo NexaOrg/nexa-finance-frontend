@@ -87,7 +87,7 @@ export function Register({ navigation }: any) {
                             alignItems: 'center',
                         }}
                             onPress={handleRegister}>
-                            <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Registrar</Text>
+                            <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium' }}>Registrar</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -110,6 +110,7 @@ const styles = StyleSheet.create({
         borderRadius: 13,
         color: 'white',
         fontSize: 18,
-        marginVertical: 5
+        marginVertical: 5,
+        fontFamily: 'Montserrat_400Regular'
     },
 });
