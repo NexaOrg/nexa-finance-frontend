@@ -46,6 +46,7 @@ export function Login({ navigation }: any) {
               textAlign: 'right',
               fontSize: 13,
               padding: 8,
+              fontFamily: 'Montserrat_400Regular' 
             }}>Esqueci minha senha</Text>
           </TouchableOpacity>
 
@@ -65,7 +66,7 @@ export function Login({ navigation }: any) {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-              <Text style={{ textAlign: 'center', color: '#9E9E9E', fontSize: 15 }}>Criar uma conta</Text>
+              <Text style={{ textAlign: 'center', color: '#9E9E9E', fontSize: 15, fontFamily: 'Montserrat_400Regular' }}>Criar uma conta</Text>
             </TouchableOpacity>
           </View>
         </View>

@@ -13,8 +13,13 @@ export function Dashboard({ navigation }: any) {
   ];
 
   return (
+    <View style={{ flex: 1, width: '100%', backgroundColor: '#ffffff'}}>
+        <View style={{ width: '100%', height: 120, backgroundColor: '#0D1928' }}>
+            <Text style={{ color: 'white', paddingLeft: 15, paddingTop: 70, fontSize: 25 }}>Olá, Bruno</Text>
+        </View>
+
         <ScrollView
-            style={{ flex: 1, backgroundColor: '#0d1928' }}
+            style={{ flex: 1, width: '100%', backgroundColor: '#0D1928' }}
             showsVerticalScrollIndicator={false}
             bounces={true}>
                 
@@ -22,7 +27,6 @@ export function Dashboard({ navigation }: any) {
                         backgroundColor: '#0d1928',
                         borderBottomLeftRadius: 15,
                         borderBottomRightRadius: 15,
-                        paddingTop: 70,
                         paddingHorizontal: 20,
                         paddingBottom: 20
                     }}>
@@ -199,5 +203,6 @@ export function Dashboard({ navigation }: any) {
                 }}
             />
         </ScrollView>
+    </View>
   );
 }
