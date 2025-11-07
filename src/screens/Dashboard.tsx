@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, TouchableOpacity, View } from 'react-native';
+import { ScrollView, TouchableOpacity, View, Image } from 'react-native';
 import { Text } from '../components/GlobalText';
 import { PieChart } from 'react-native-gifted-charts';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -14,8 +14,10 @@ export function Dashboard({ navigation }: any) {
 
   return (
     <View style={{ flex: 1, width: '100%', backgroundColor: '#ffffff'}}>
-        <View style={{ width: '100%', height: 120, backgroundColor: '#0D1928' }}>
-            <Text style={{ color: 'white', paddingLeft: 15, paddingTop: 70, fontSize: 25 }}>Olá, Bruno</Text>
+        <View style={{ width: '100%', height: 100, flexDirection: 'row', paddingLeft: 20, paddingTop: 60, backgroundColor: '#0D1928' }}>
+            <View style={{ width: 32, height: 26, marginRight: 10}}>
+                <Image style={{ width: '100%', height: '100%'}} source={require('../assets/images/logo.png')}/>
+            </View>
         </View>
 
         <ScrollView
@@ -28,7 +30,8 @@ export function Dashboard({ navigation }: any) {
                         borderBottomLeftRadius: 15,
                         borderBottomRightRadius: 15,
                         paddingHorizontal: 20,
-                        paddingBottom: 20
+                        paddingBottom: 20,
+                        paddingTop: 10,
                     }}>
                 <Text style={{ color: '#ffffff', fontSize: 18 }}>Gasto mensal</Text>
 
@@ -198,10 +201,168 @@ export function Dashboard({ navigation }: any) {
                     backgroundColor: '#ffffff',
                     height: 700,
                     marginTop: 10,
-                    borderTopLeftRadius: 15,
-                    borderTopRightRadius: 15,
-                }}
-            />
+                    borderRadius: 15,
+                    padding: 20
+                }}>
+                <Text
+                    style={{
+                        color: '#0D1928',
+                        fontSize: 20,
+                        fontFamily: 'Montserrat_400Regular',
+                        paddingBottom: 10,
+                    }}>
+                Atividades
+                </Text>
+
+                <Text
+                    style={{
+                        color: '#0D1928',
+                        fontSize: 20,
+                        fontFamily: 'Montserrat_400Regular',
+                        paddingBottom: 10,
+                        paddingTop: 10,
+                    }}>
+                16/10
+                </Text>
+
+                <View style={{ flexDirection: 'row', paddingLeft: 10, paddingBottom: 15 }}>
+                    <View style={{ flexDirection: 'row', flex: 1}}>
+                        <View style={{ width: 35, height: 35, backgroundColor: '#213B4D', borderRadius: '100%' }}></View>
+
+                        <View style={{ flexDirection: 'column', paddingLeft: 8}}>
+                            <Text style={{ fontSize: 18 }}>Saída no McDonalds</Text>
+                            <Text style={{ fontSize: 14 }}>16:00</Text>
+                        </View>
+                    </View>
+
+                    <Text style={{ fontSize: 18 }}>R$ 45,00</Text>
+                </View>
+
+                <Text
+                    style={{
+                        color: '#0D1928',
+                        fontSize: 20,
+                        fontFamily: 'Montserrat_400Regular',
+                        paddingBottom: 10,
+                        paddingTop: 10,
+                    }}>
+                15/10
+                </Text>
+
+                <View style={{ flexDirection: 'row', paddingLeft: 10, paddingBottom: 15 }}>
+                    <View style={{ flexDirection: 'row', flex: 1}}>
+                        <View style={{ width: 35, height: 35, backgroundColor: '#213B4D', borderRadius: '100%' }}></View>
+
+                        <View style={{ flexDirection: 'column', paddingLeft: 8}}>
+                            <Text style={{ fontSize: 18 }}>Saída no McDonalds</Text>
+                            <Text style={{ fontSize: 14 }}>16:00</Text>
+                        </View>
+                    </View>
+
+                    <Text style={{ fontSize: 18 }}>R$ 45,00</Text>
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingLeft: 10, paddingBottom: 15 }}>
+                    <View style={{ flexDirection: 'row', flex: 1}}>
+                        <View style={{ width: 35, height: 35, backgroundColor: '#213B4D', borderRadius: '100%' }}></View>
+
+                        <View style={{ flexDirection: 'column', paddingLeft: 8}}>
+                            <Text style={{ fontSize: 18 }}>Saída no McDonalds</Text>
+                            <Text style={{ fontSize: 14 }}>16:00</Text>
+                        </View>
+                    </View>
+
+                    <Text style={{ fontSize: 18 }}>R$ 45,00</Text>
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingLeft: 10, paddingBottom: 15 }}>
+                    <View style={{ flexDirection: 'row', flex: 1}}>
+                        <View style={{ width: 35, height: 35, backgroundColor: '#213B4D', borderRadius: '100%' }}></View>
+
+                        <View style={{ flexDirection: 'column', paddingLeft: 8}}>
+                            <Text style={{ fontSize: 18 }}>Saída no McDonalds</Text>
+                            <Text style={{ fontSize: 14 }}>16:00</Text>
+                        </View>
+                    </View>
+
+                    <Text style={{ fontSize: 18 }}>R$ 45,00</Text>
+                </View>
+
+                <Text
+                    style={{
+                        color: '#0D1928',
+                        fontSize: 20,
+                        fontFamily: 'Montserrat_400Regular',
+                        paddingBottom: 10,
+                        paddingTop: 10,
+                    }}>
+                14/10
+                </Text>
+
+                <View style={{ flexDirection: 'row', paddingLeft: 10, paddingBottom: 15 }}>
+                    <View style={{ flexDirection: 'row', flex: 1}}>
+                        <View style={{ width: 35, height: 35, backgroundColor: '#213B4D', borderRadius: '100%' }}></View>
+
+                        <View style={{ flexDirection: 'column', paddingLeft: 8}}>
+                            <Text style={{ fontSize: 18 }}>Saída no McDonalds</Text>
+                            <Text style={{ fontSize: 14 }}>16:00</Text>
+                        </View>
+                    </View>
+
+                    <Text style={{ fontSize: 18 }}>R$ 45,00</Text>
+                </View>
+
+                <Text
+                    style={{
+                        color: '#0D1928',
+                        fontSize: 20,
+                        fontFamily: 'Montserrat_400Regular',
+                        paddingBottom: 10,
+                        paddingTop: 10,
+                    }}>
+                13/10
+                </Text>
+
+                <View style={{ flexDirection: 'row', paddingLeft: 10, paddingBottom: 15 }}>
+                    <View style={{ flexDirection: 'row', flex: 1}}>
+                        <View style={{ width: 35, height: 35, backgroundColor: '#213B4D', borderRadius: '100%' }}></View>
+
+                        <View style={{ flexDirection: 'column', paddingLeft: 8}}>
+                            <Text style={{ fontSize: 18 }}>Saída no McDonalds</Text>
+                            <Text style={{ fontSize: 14 }}>16:00</Text>
+                        </View>
+                    </View>
+
+                    <Text style={{ fontSize: 18 }}>R$ 45,00</Text>
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingLeft: 10, paddingBottom: 15 }}>
+                    <View style={{ flexDirection: 'row', flex: 1}}>
+                        <View style={{ width: 35, height: 35, backgroundColor: '#213B4D', borderRadius: '100%' }}></View>
+
+                        <View style={{ flexDirection: 'column', paddingLeft: 8}}>
+                            <Text style={{ fontSize: 18 }}>Saída no McDonalds</Text>
+                            <Text style={{ fontSize: 14 }}>16:00</Text>
+                        </View>
+                    </View>
+
+                    <Text style={{ fontSize: 18 }}>R$ 45,00</Text>
+                </View>
+
+                <View style={{ flexDirection: 'row', paddingLeft: 10, paddingBottom: 15 }}>
+                    <View style={{ flexDirection: 'row', flex: 1}}>
+                        <View style={{ width: 35, height: 35, backgroundColor: '#213B4D', borderRadius: '100%' }}></View>
+
+                        <View style={{ flexDirection: 'column', paddingLeft: 8}}>
+                            <Text style={{ fontSize: 18 }}>Saída no McDonalds</Text>
+                            <Text style={{ fontSize: 14 }}>16:00</Text>
+                        </View>
+                    </View>
+
+                    <Text style={{ fontSize: 18 }}>R$ 45,00</Text>
+                </View>
+
+            </View>
         </ScrollView>
     </View>
   );

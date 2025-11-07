@@ -20,6 +20,7 @@ export function Routes() {
       <Stack.Screen
         name="Dashboard"
         component={Dashboard}
+        options={{ gestureEnabled: false }}
       />
     </Stack.Navigator>
   );
