@@ -1,31 +1,38 @@
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 
 export default function CustomTabBar({ state, navigation }: any) {
     return (
         <View style={{
             flexDirection: 'row',
-            backgroundColor: '#0D1928',
             padding: 12,
             justifyContent: 'space-between',
             alignItems: 'center',
-            borderTopLeftRadius: 25,
-            borderTopRightRadius: 25
+            marginBottom: 25,
+            marginHorizontal: 20,
+            borderRadius: 50,
+            gap: 10
         }}>
-
-            {/* Renderiza as 3 tabs normais */}
-            <View style={{ flexDirection: 'row', gap: 20 }}>
+            <View style={{
+                flex: 1,
+                height: '100%',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: 20,
+                backgroundColor: '#4d6271',
+                borderRadius: 50,
+            }}>
                 {state.routes.map((route: any, index: any) => (
                     <TouchableOpacity
                         key={route.key}
                         onPress={() => navigation.navigate(route.name)}
                     >
-                        {/* Aqui você coloca ícones depois */}
+                        <Text style={{ color: 'white' }}>{route.name}</Text>
                     </TouchableOpacity>
                 ))}
             </View>
 
-            {/* Botão "+" isolado */}
             <TouchableOpacity
                 onPress={() => navigation.navigate('AddTransaction')}
                 style={{
@@ -37,7 +44,7 @@ export default function CustomTabBar({ state, navigation }: any) {
                     alignItems: 'center',
                 }}
             >
-                {/* Ícone do + */}
+                <Text style={{ color: 'white', fontSize: 40}}>+</Text>
             </TouchableOpacity>
 
         </View>

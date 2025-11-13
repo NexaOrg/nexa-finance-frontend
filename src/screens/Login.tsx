@@ -1,8 +1,11 @@
 import React from 'react';
 import { Text, TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useAuth } from '../contexts/AuthContext';
 
 export function Login({ navigation }: any) {
+
+  const { setUserLogged } : any = useAuth();
 
   return (
     <SafeAreaView style={{
@@ -58,7 +61,7 @@ export function Login({ navigation }: any) {
               justifyContent: 'center',
               alignItems: 'center',
             }}
-              onPress={() => console.log('Navegação para tela inicial')}>
+              onPress={() => setUserLogged(true)}>
               <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Entrar</Text>
             </TouchableOpacity>
 
