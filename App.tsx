@@ -1,12 +1,12 @@
 import React from 'react';
-import { Routes } from './src/routes/index'; 
 import { NavigationContainer } from '@react-navigation/native';
 import BootSplash from 'react-native-bootsplash';
+import { AppNavigator } from './src/navigation/AppNavigator';
 
 export default function App() {
   return (
     <NavigationContainer onReady={() => BootSplash.hide({ fade: true })}>
-      <Routes />
+      <AppNavigator />
     </NavigationContainer>
   );
 }
