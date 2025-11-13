@@ -39,6 +39,7 @@ export function Login({ navigation }: any) {
             flexDirection: 'row',
             justifyContent: 'flex-end',
             alignSelf: 'flex-end',
+            width: '50%'
           }}
             onPress={() => console.log('Esqueceu a senha de novo?')}>
             <Text style={{
@@ -46,7 +47,8 @@ export function Login({ navigation }: any) {
               textAlign: 'right',
               fontSize: 13,
               padding: 8,
-              fontFamily: 'Montserrat_400Regular' 
+              flex: 1,
+              fontFamily: 'Montserrat_400Regular'
             }}>Esqueci minha senha</Text>
           </TouchableOpacity>
 
@@ -57,12 +59,12 @@ export function Login({ navigation }: any) {
               backgroundColor: '#F39F03',
               paddingInline: 10,
               borderRadius: 10,
-              display: 'flex',
+              flexDirection: 'row',
               justifyContent: 'center',
               alignItems: 'center',
             }}
               onPress={() => navigation.navigate('Dashboard')}>
-              <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium' }}>Entrar</Text>
+              <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium', textAlign: 'center', flex: 1 }}>Entrar</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate('Register')}>
@@ -86,6 +88,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     marginVertical: 5,
+    paddingTop: 13,
     fontFamily: 'Montserrat_400Regular'
   },
 });

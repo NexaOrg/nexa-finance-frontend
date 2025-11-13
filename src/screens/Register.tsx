@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 18,
         marginVertical: 5,
+        paddingTop: 13,
         fontFamily: 'Montserrat_400Regular'
     },
 });
