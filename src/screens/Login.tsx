@@ -9,9 +9,7 @@ export function Login({ navigation }: any) {
 
   return (
     <SafeAreaView style={{
-      display: 'flex',
-      width: '100%',
-      height: '100%',
+      flex: 1, 
       backgroundColor: '#0D1928',
       justifyContent: 'center',
       alignItems: 'center'
@@ -39,14 +37,16 @@ export function Login({ navigation }: any) {
           <TouchableOpacity style={{
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'flex-end'
+            justifyContent: 'flex-end',
+            alignSelf: 'flex-end',
+            width: '40%',
           }}
             onPress={() => console.log('Esqueceu a senha de novo?')}>
             <Text style={{
               color: '#9E9E9E',
               textAlign: 'right',
               fontSize: 15,
-              padding: 8
+              padding: 8,
             }}>Esqueci minha senha</Text>
           </TouchableOpacity>
 
