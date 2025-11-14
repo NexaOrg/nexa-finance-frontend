@@ -20,7 +20,7 @@ export function MainTabs() {
             tabBarShowLabel: false
         }} 
         tabBar={(props) => <CustomTabBar {...props} />}>
-            <Tab.Screen name='Home' component={() => <View>
+            <Tab.Screen name='Home' component={() => <View style={{ backgroundColor: '#0d1928', paddingTop: 50}}>
                 <ScrollView style={{ backgroundColor: 'white'}}>
                     <Text>Teste Teste Teste Testatstas Teste TStatatetstas</Text>
                     <Text>Teste Teste Teste Testatstas Teste TStatatetstas</Text>
