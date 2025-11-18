@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollView, TouchableOpacity, View, Image } from 'react-native';
 import { Text } from '../components/GlobalText';
 import { PieChart } from 'react-native-gifted-charts';
@@ -7,10 +7,57 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 export function Dashboard({ navigation }: any) {
   const [isVisible, setIsVisible] = useState(true);
 
-  const pieData = [
-    { value: 70, color: '#F39F03' },
-    { value: 30, color: '#ffffff' },
-  ];
+    const easeOutCubic = (t: any) => 1 - Math.pow(1 - t, 3);
+
+    const easeOutBack = (t: any) => {
+    const c1 = 1.70158;
+    const c3 = c1 + 1;
+    return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
+    };
+
+
+  const [dataAnimated, setDataAnimated] = useState([
+    { value: 0, color: '#F39F03' },
+    { value: 100, color: '#ffffff' }
+  ]);
+  
+  const [percentText, setPercentText] = useState(0);
+  
+
+  useEffect(() => {
+
+    const FINAL_VALUE = 70;
+    const DURATION = 1500;
+    const OVERSHOOT = 1.08;
+  
+    const start = Date.now() + 200;
+  
+    const animate = () => {
+      const now = Date.now();
+      const elapsed = now - start;
+      const t = Math.min(elapsed / DURATION, 1);
+  
+      const eased = easeOutCubic(t);
+  
+      const overshootApplied = t < 1 ? eased : easeOutBack(1);
+
+      const animatedValue = overshootApplied * FINAL_VALUE * OVERSHOOT;
+
+      const clamped = Math.min(animatedValue, FINAL_VALUE);
+
+      setDataAnimated([
+        { value: clamped, color: '#F39F03' },
+        { value: 100 - clamped, color: '#ffffff' }
+      ]);
+
+      setPercentText(Math.floor((clamped / FINAL_VALUE) * 70));
+  
+      if (t < 1) requestAnimationFrame(animate);
+    };
+  
+    requestAnimationFrame(animate);
+  }, []);
+  
 
   return (
     <View style={{ flex: 1, width: '100%', backgroundColor: '#ffffff'}}>
@@ -152,10 +199,10 @@ export function Dashboard({ navigation }: any) {
                 }}>
                 <PieChart
                     donut
+                    data={dataAnimated}
                     radius={90}
                     innerRadius={60}
                     innerCircleColor="#213b4d"
-                    data={pieData}
                     centerLabelComponent={() => (
                     <View
                         style={{
@@ -168,7 +215,7 @@ export function Dashboard({ navigation }: any) {
                                 color: '#ffffff',
                                 lineHeight: 30,
                             }}>
-                        70%
+                        {percentText > 0 ? percentText : 0}%
                         </Text>
                         <Text style={{ fontSize: 14, color: '#ffffff80' }}>
                         Novembro
