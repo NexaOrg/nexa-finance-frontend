@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Text, TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
+import { TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
+import { Text } from '../components/GlobalText';
 import { env } from '../../env';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import axios from 'axios';
@@ -86,7 +87,7 @@ export function Register({ navigation }: any) {
                             alignItems: 'center',
                         }}
                             onPress={handleRegister}>
-                            <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Registrar</Text>
+                            <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium' }}>Registrar</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -109,6 +110,8 @@ const styles = StyleSheet.create({
         borderRadius: 13,
         color: 'white',
         fontSize: 18,
-        marginVertical: 5
+        marginVertical: 5,
+        paddingTop: 13,
+        fontFamily: 'Montserrat_400Regular'
     },
 });

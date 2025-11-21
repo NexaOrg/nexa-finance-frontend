@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
+import { TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text } from '../components/GlobalText';
 
 export function Login({ navigation }: any) {
 
@@ -36,14 +37,18 @@ export function Login({ navigation }: any) {
           <TouchableOpacity style={{
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'flex-end'
+            justifyContent: 'flex-end',
+            alignSelf: 'flex-end',
+            width: '50%'
           }}
             onPress={() => console.log('Esqueceu a senha de novo?')}>
             <Text style={{
               color: '#9E9E9E',
               textAlign: 'right',
-              fontSize: 15,
-              padding: 8
+              fontSize: 13,
+              padding: 8,
+              flex: 1,
+              fontFamily: 'Montserrat_400Regular'
             }}>Esqueci minha senha</Text>
           </TouchableOpacity>
 
@@ -54,16 +59,16 @@ export function Login({ navigation }: any) {
               backgroundColor: '#F39F03',
               paddingInline: 10,
               borderRadius: 10,
-              display: 'flex',
+              flexDirection: 'row',
               justifyContent: 'center',
               alignItems: 'center',
             }}
-              onPress={() => console.log('Navegação para tela inicial')}>
-              <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Entrar</Text>
+              onPress={() => navigation.navigate('Dashboard')}>
+              <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium', textAlign: 'center', flex: 1 }}>Entrar</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-              <Text style={{ textAlign: 'center', color: '#9E9E9E', fontSize: 15 }}>Criar uma conta</Text>
+              <Text style={{ textAlign: 'center', color: '#9E9E9E', fontSize: 15, fontFamily: 'Montserrat_400Regular' }}>Criar uma conta</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -82,6 +87,8 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     color: 'white',
     fontSize: 18,
-    marginVertical: 5
+    marginVertical: 5,
+    paddingTop: 13,
+    fontFamily: 'Montserrat_400Regular'
   },
 });
