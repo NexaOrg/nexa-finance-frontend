@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
+import { TextInput, TouchableOpacity, Image, View, TouchableWithoutFeedback, Keyboard, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text } from '../components/GlobalText';
 import { useAuth } from '../contexts/AuthContext';
 
 export function Login({ navigation }: any) {
@@ -39,14 +40,15 @@ export function Login({ navigation }: any) {
             flexDirection: 'row',
             justifyContent: 'flex-end',
             alignSelf: 'flex-end',
-            width: '40%',
+            width: '50%'
           }}
             onPress={() => console.log('Esqueceu a senha de novo?')}>
             <Text style={{
               color: '#9E9E9E',
               textAlign: 'right',
-              fontSize: 15,
+              fontSize: 13,
               padding: 8,
+              flex: 1,
             }}>Esqueci minha senha</Text>
           </TouchableOpacity>
 
@@ -57,12 +59,12 @@ export function Login({ navigation }: any) {
               backgroundColor: '#F39F03',
               paddingInline: 10,
               borderRadius: 10,
-              display: 'flex',
+              flexDirection: 'row',
               justifyContent: 'center',
               alignItems: 'center',
             }}
               onPress={() => setUserLogged(true)}>
-              <Text style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Entrar</Text>
+              <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium', textAlign: 'center', flex: 1 }}>Entrar</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate('Register')}>
@@ -85,6 +87,7 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     color: 'white',
     fontSize: 18,
-    marginVertical: 5
+    marginVertical: 5,
+    fontFamily: 'Montserrat_400Regular'
   },
 });
