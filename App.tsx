@@ -4,6 +4,7 @@ import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import BootSplash from 'react-native-bootsplash';
 import { AppNavigator } from './src/navigation/AppNavigator';
 import { AuthProvider } from './src/contexts/AuthContext';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import {
   useFonts,
   Montserrat_300Light,
@@ -32,10 +33,14 @@ export default function App() {
   LogBox.ignoreAllLogs(true);
 
   return (
-    <NavigationContainer theme={MyTheme} onReady={() => BootSplash.hide({ fade: true })}>
-      <AuthProvider>
-        <AppNavigator />
-      </AuthProvider>
-    </NavigationContainer>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <NavigationContainer
+        theme={MyTheme}
+        onReady={() => BootSplash.hide({ fade: true })}>
+        <AuthProvider>
+          <AppNavigator />
+        </AuthProvider>
+      </NavigationContainer>
+    </GestureHandlerRootView>
   );
 }

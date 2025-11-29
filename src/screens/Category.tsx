@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useMemo, useRef } from 'react';
 import { View, Image, FlatList, TouchableOpacity, ScrollView } from 'react-native';
 import { Text } from '../components/GlobalText';
+import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
+
 
 export function Category() {
+
+    const snapPoints = useMemo(() => ['40%', '80%'], []);
+    const bottomSheetRef = useRef<BottomSheet>(null);
+
+    const openSheet = () => {
+        bottomSheetRef.current?.expand();
+    };
 
     const icons: { [key: string]: any } = {
         store: require('../assets/icons/store-front.png'),
@@ -70,10 +79,20 @@ export function Category() {
                     justifyContent: 'center',
                     alignItems: 'center',
                 }}
-                    onPress={() => {}}>
+                    onPress={openSheet}>
                     <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium', textAlign: 'center', flex: 1 }}>Nova Categoria</Text>
                 </TouchableOpacity>
             </ScrollView>
+
+            <BottomSheet
+                ref={bottomSheetRef}
+                index={-1}
+                snapPoints={snapPoints}
+                enablePanDownToClose>
+                <BottomSheetScrollView style={{ padding: 20 }}>
+                    <Text>Conteúdo…</Text>
+                </BottomSheetScrollView>
+            </BottomSheet>
         </View>
     )
 }
