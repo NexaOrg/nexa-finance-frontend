@@ -45,9 +45,9 @@ export default function CustomTabBar({ state, navigation }: any) {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity disabled onPress={() => navigation.navigate('Categories')} activeOpacity={100} style={{ flex: 1 }}>
-                    <View style={{ backgroundColor: state.routes[state.index].name == 'Categories' ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ height: '70%', width: 25, paddingTop: 5, marginTop: 7 }} source={state.routes[state.index].name == 'Categories' ? require('../assets/icons/tag-white.png') : require('../assets/icons/tag-gray.png')} />
+                <TouchableOpacity onPress={() => navigation.navigate('Categories')} activeOpacity={100} style={{ flex: 1 }}>
+                    <View style={{ backgroundColor: state.routes[state.index].name == 'Categories' ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center', padding: 9 }}>
+                        <Image style={{ height: '100%', width: 26, paddingTop: 5 }} source={state.routes[state.index].name == 'Categories' ? require('../assets/icons/tag-white.png') : require('../assets/icons/tag-gray.png')} />
                     </View>
                 </TouchableOpacity>
 

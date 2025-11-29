@@ -5,6 +5,7 @@ import CustomTabBar from '../components/CustomTabBar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Dashboard } from '../screens/Dashboard';
 import { Profile } from '../screens/Profile';
+import { Category } from '../screens/Category';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +25,7 @@ export function MainTabs() {
         tabBar={(props) => <CustomTabBar {...props} />}>
             <Tab.Screen name='Home' component={() => <Dashboard />} />
             <Tab.Screen name='Wallet' component={() => <SafeAreaView><Text>Carteira</Text></SafeAreaView>} />
-            <Tab.Screen name='Categories' component={() => <SafeAreaView><Text>Categorias</Text></SafeAreaView>} />
+            <Tab.Screen name='Categories' component={() => <Category />} />
             <Tab.Screen name='Profile' component={() => <Profile />} />
         </Tab.Navigator>
     )
