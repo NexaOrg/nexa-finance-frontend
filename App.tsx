@@ -1,8 +1,9 @@
 import React from 'react';
 import { LogBox } from 'react-native';
-import { Routes } from './src/routes/index';
-import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import BootSplash from 'react-native-bootsplash';
+import { AppNavigator } from './src/navigation/AppNavigator';
+import { AuthProvider } from './src/contexts/AuthContext';
 import {
   useFonts,
   Montserrat_300Light,
@@ -12,6 +13,15 @@ import {
 } from '@expo-google-fonts/montserrat';
 
 export default function App() {
+
+  const MyTheme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      background: '#0D1928'
+    },
+  };
+
   const [] = useFonts({
     Montserrat_300Light,
     Montserrat_400Regular,
@@ -22,8 +32,10 @@ export default function App() {
   LogBox.ignoreAllLogs(true);
 
   return (
-    <NavigationContainer onReady={() => BootSplash.hide({ fade: true })}>
-      <Routes />
+    <NavigationContainer theme={MyTheme} onReady={() => BootSplash.hide({ fade: true })}>
+      <AuthProvider>
+        <AppNavigator />
+      </AuthProvider>
     </NavigationContainer>
   );
 }

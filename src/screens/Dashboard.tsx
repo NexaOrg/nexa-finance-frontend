@@ -246,10 +246,11 @@ export function Dashboard({ navigation }: any) {
             <View
                 style={{
                     backgroundColor: '#ffffff',
-                    height: 700,
                     marginTop: 10,
                     borderRadius: 15,
-                    padding: 20
+                    paddingTop: 20,
+                    paddingHorizontal: 20,
+                    paddingBottom: 100
                 }}>
                 <Text
                     style={{
