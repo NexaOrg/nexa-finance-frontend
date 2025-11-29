@@ -71,7 +71,7 @@ export function Category() {
                     alignItems: 'center',
                 }}
                     onPress={() => {}}>
-                    <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium', textAlign: 'center', flex: 1 }}>Entrar</Text>
+                    <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat_500Medium', textAlign: 'center', flex: 1 }}>Nova Categoria</Text>
                 </TouchableOpacity>
             </ScrollView>
         </View>
