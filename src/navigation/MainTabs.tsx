@@ -17,6 +17,7 @@ export function MainTabs() {
             tabBarStyle: {
                 position: 'absolute',
                 backgroundColor: 'transparent',
+                zIndex: 0,
                 elevation: 0,
                 borderTopWidth: 0
             },

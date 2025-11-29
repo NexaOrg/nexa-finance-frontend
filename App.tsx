@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { LogBox } from 'react-native';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
@@ -34,13 +35,13 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <NavigationContainer
-        theme={MyTheme}
-        onReady={() => BootSplash.hide({ fade: true })}>
-        <AuthProvider>
-          <AppNavigator />
-        </AuthProvider>
-      </NavigationContainer>
+          <NavigationContainer
+            theme={MyTheme}
+            onReady={() => BootSplash.hide({ fade: true })}>
+            <AuthProvider>
+              <AppNavigator />
+            </AuthProvider>
+          </NavigationContainer>
     </GestureHandlerRootView>
   );
 }

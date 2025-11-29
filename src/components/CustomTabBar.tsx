@@ -4,6 +4,9 @@ import { BlurView } from 'expo-blur';
 
 
 export default function CustomTabBar({ state, navigation }: any) {
+    
+    const isFocused = (index: number) => state.index === index;
+
     return (
         <View style={{
             flexDirection: 'row',
@@ -15,7 +18,8 @@ export default function CustomTabBar({ state, navigation }: any) {
             borderRadius: 50,
             gap: 5,
             position: 'absolute',
-            bottom: 0
+            bottom: 0,
+            zIndex: 1,
         }}>
             <BlurView
             intensity={20}
@@ -33,27 +37,55 @@ export default function CustomTabBar({ state, navigation }: any) {
                 overflow: 'hidden',
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
             }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Home')} activeOpacity={100} style={{ flex: 1 }}>
-                    <View style={{ backgroundColor: state.routes[state.index].name == 'Home' ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center', padding: 12}}>
-                        <Image style={{ height: '100%', width: 26 }} source={state.routes[state.index].name == 'Home' ? require('../assets/icons/home-white.png') : require('../assets/icons/home-gray.png')} />
+                <TouchableOpacity onPress={() => navigation.navigate('Home')} activeOpacity={1} style={{ flex: 1 }}>
+                    <View style={{ backgroundColor: isFocused(0) ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center', padding: 12}}>
+                        <Image 
+                            style={{ height: '100%', width: 26, opacity: isFocused(0) ? 0 : 1 }} 
+                            source={require('../assets/icons/home-gray.png')} 
+                        />
+                        <Image 
+                            style={{ height: '100%', width: 26, position: 'absolute', opacity: isFocused(0) ? 1 : 0 }} 
+                            source={require('../assets/icons/home-white.png')} 
+                        />
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity disabled onPress={() => navigation.navigate('Wallet')} activeOpacity={100} style={{ flex: 1 }}>
-                    <View style={{ backgroundColor: state.routes[state.index].name == 'Wallet' ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center', padding: 12 }}>
-                        <Image style={{ height: '100%', width: 26 }} source={state.routes[state.index].name == 'Wallet' ? require('../assets/icons/wallet-white.png') : require('../assets/icons/wallet-gray.png')} />
+                <TouchableOpacity disabled onPress={() => navigation.navigate('Wallet')} activeOpacity={1} style={{ flex: 1 }}>
+                    <View style={{ backgroundColor: isFocused(1) ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center', padding: 12 }}>
+                        <Image 
+                            style={{ height: '100%', width: 26, opacity: isFocused(1) ? 0 : 1 }} 
+                            source={require('../assets/icons/wallet-gray.png')} 
+                        />
+                        <Image 
+                            style={{ height: '100%', width: 26, position: 'absolute', opacity: isFocused(1) ? 1 : 0 }} 
+                            source={require('../assets/icons/wallet-white.png')} 
+                        />
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Categories')} activeOpacity={100} style={{ flex: 1 }}>
-                    <View style={{ backgroundColor: state.routes[state.index].name == 'Categories' ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center', padding: 9 }}>
-                        <Image style={{ height: '100%', width: 26, paddingTop: 5 }} source={state.routes[state.index].name == 'Categories' ? require('../assets/icons/tag-white.png') : require('../assets/icons/tag-gray.png')} />
+                <TouchableOpacity onPress={() => navigation.navigate('Categories')} activeOpacity={1} style={{ flex: 1 }}>
+                    <View style={{ backgroundColor: isFocused(2) ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center', padding: 9 }}>
+                        <Image 
+                            style={{ height: '100%', width: 26, paddingTop: 5, opacity: isFocused(2) ? 0 : 1 }} 
+                            source={require('../assets/icons/tag-gray.png')} 
+                        />
+                        <Image 
+                            style={{ height: '100%', width: 26, paddingTop: 5, position: 'absolute', opacity: isFocused(2) ? 1 : 0 }} 
+                            source={require('../assets/icons/tag-white.png')} 
+                        />
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Profile')} activeOpacity={100} style={{ flex: 1 }}>
-                    <View style={{ backgroundColor: state.routes[state.index].name == 'Profile' ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center', padding: 12 }}>
-                        <Image style={{ height: '100%', width: 26 }} source={state.routes[state.index].name == 'Profile' ? require('../assets/icons/avatar-white.png') : require('../assets/icons/avatar-gray.png')} />
+                <TouchableOpacity onPress={() => navigation.navigate('Profile')} activeOpacity={1} style={{ flex: 1 }}>
+                    <View style={{ backgroundColor: isFocused(3) ? '#213B4D' : 'transparent', borderRadius: 50, alignItems: 'center', justifyContent: 'center', padding: 12 }}>
+                        <Image 
+                            style={{ height: '100%', width: 26, opacity: isFocused(3) ? 0 : 1 }} 
+                            source={require('../assets/icons/avatar-gray.png')} 
+                        />
+                        <Image 
+                            style={{ height: '100%', width: 26, position: 'absolute', opacity: isFocused(3) ? 1 : 0 }} 
+                            source={require('../assets/icons/avatar-white.png')} 
+                        />
                     </View>
                 </TouchableOpacity>
             </BlurView>
